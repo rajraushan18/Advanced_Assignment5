@@ -10,7 +10,7 @@ pipeline {
 		stage("Checkout code"){
 			steps
 			{
-				checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: '31782584-e788-4f38-bf61-e7dba9f375ec', url: 'https://git.nagarro.com/GITG00641/Java/raj-raushan.git']]])
+				checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/rajraushan18/Advanced_Assignment5.git']])
 				echo 'Check Out'
 			}
         }
