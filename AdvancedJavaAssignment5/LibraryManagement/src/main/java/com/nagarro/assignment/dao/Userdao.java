@@ -19,8 +19,8 @@ public class Userdao {
 	public boolean checkUser(User user) {
 		
 		User new_user = new User();
-		new_user.setUserid("eren@email.com");
-		new_user.setPassword("eren12");
+		new_user.setUserid("admin");
+		new_user.setPassword("admin123");
 		this.hibernateTemplate.save(new_user);
 
 		List<User> user_list = hibernateTemplate.loadAll(User.class);
